@@ -1,6 +1,6 @@
 /* mystyle.css */
 .bong{
-    width: 200px; height: 200px; border: 1px solid blue;
+    width: 200px; height: 200px; border: 1px solid blue; float: left;
     border-radius: 100px; text-align: center;
 }
-.bong2{width: 0; height: 0; border-radius: 100px; border: 100px solid red;}
+.bong2{width: 0; height: 0; border-radius: 100px; border: 100px solid red; float: right;}

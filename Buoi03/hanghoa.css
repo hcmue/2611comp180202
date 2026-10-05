@@ -1,0 +1,6 @@
+/* hanghoa.css */
+.hh-box{width: 200px; height: 280px; border: 1px solid blue; text-align: center; position: relative; display: inline-block;}
+.hh-box:hover{box-shadow: 0 0 7px red; border-radius: 7px;}
+.hh-box-img{width: 80%;}
+.hh-box-icon{position: absolute; top: 0; right: 0;}
+.hh-box-price{position: absolute; left: 5px; bottom: 5px; color: blue; font-weight: bolder; font-size: larger;}
