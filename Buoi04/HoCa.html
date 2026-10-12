@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ cá</title>
+
+    <style>
+        #hoca {
+            position: fixed;
+            bottom: 0;
+            left: 1%;
+            height: 75vh;
+            width: 98%;
+            background-color: beige;
+            border: 2px double blue;
+            border-top: 0;
+            overflow: hidden;
+        }
+
+        .caboi {
+            --fish-width: clamp(90px, 12vw, 160px);
+
+            position: absolute;
+            left: 5%;
+            top: 65%;
+            width: var(--fish-width);
+            height: auto;
+
+            transform-origin: center;
+            will-change: transform;
+
+            animation: boi 16s ease-in-out infinite;
+        }
+
+        @keyframes boi {
+            /* Bắt đầu bơi sang phải */
+            0% {
+                transform: translate3d(0, 0, 0)
+                           rotateY(0deg);
+            }
+
+            /* Bơi đến bên phải và đi lên */
+            45% {
+                transform: translate3d(
+                    calc(90vw - var(--fish-width)),
+                    -30vh,
+                    0
+                ) rotateY(0deg);
+            }
+
+            /* Quay đầu sang trái */
+            50% {
+                transform: translate3d(
+                    calc(90vw - var(--fish-width)),
+                    -30vh,
+                    0
+                ) rotateY(180deg);
+            }
+
+            /* Bơi trở về bên trái */
+            95% {
+                transform: translate3d(0, 0, 0)
+                           rotateY(180deg);
+            }
+
+            /* Quay đầu để tiếp tục vòng mới */
+            100% {
+                transform: translate3d(0, 0, 0)
+                           rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="hoca">
+        <img src="shark.png" class="caboi" alt="Cá mập">
+    </div>
+</body>
+</html>
